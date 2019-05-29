@@ -4,6 +4,17 @@ permalink: /readme
 
 # How to create a new Opendoc 
 
+## Task List
+
+**!!! Check that all the tasks below are completed before deployment**
+- [ ] Clone github template repo
+- [ ] Create new github repo
+- [ ] Push template to new github repo
+- [ ] Update config file
+- [ ] Configure webhook and secret
+- [ ] Set up netlify deployment
+- [ ] Change domain settings
+
 ## Github
 
 Step 1:
