@@ -1,18 +1,18 @@
-title: OpenDoc Template #----> Required
+title: OpenDoc Documentation
 remote_theme: opendocsg/opendoc-theme@v2
 timezone: Asia/Singapore
-repository: opendocsg/opendoc-template #----> Required
+repository: opendocsg/opendoc-docs
 plugins:
   - jekyll-include-cache
 baseurl: ''
 server_PROD: https://search.opendoc.sg
 server_DEV: https://search-staging.opendoc.sg
-google_analytics:  #----> Optional, Google analytics ID
-order: #----> Optional, order of documents
-  - README.md
-  - sample.md
+order: 
+  - Getting Started
+  - Using Markdown
+  - Useful References
+  - Contribute
 styling_options:
-  primary_brand_color: '#444'  #----> Optional, theme color
-  logo_path: /assets/logo.png  #----> Optional, path to logo
+  primary_brand_color: '#444'
+  logo_path: /assets/logo.png 
   opendoc_logo_path: /assets/images/logo-full.png
-  feedback_url:  #----> Optional, feedback url
