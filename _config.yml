@@ -6,13 +6,15 @@ plugins:
   - jekyll-include-cache
 baseurl: ''
 server_PROD: https://search.opendoc.sg
-server_DEV: https://search-staging.opendoc.sg
+server_DEV: https://search.opendoc.sg
 order: 
-  - Getting Started
-  - Using Markdown
-  - Useful References
-  - Contribute
+  - "01-introduction.md"
+  - "02-getting-started.md"
+  - "03-using-markdown.md"
+  - "04-contribute.md"
+  - "99-useful-references.md"
 styling_options:
   primary_brand_color: '#444'
   logo_path: /assets/logo.png 
   opendoc_logo_path: /assets/images/logo-full.png
+  feedback_url: https://form.gov.sg/5cee3d46138e3200109244df
