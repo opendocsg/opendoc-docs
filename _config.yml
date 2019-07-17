@@ -1,5 +1,5 @@
 title: OpenDoc Documentation
-remote_theme: opendocsg/opendoc-theme@v2
+remote_theme: opendocsg/opendoc-theme@s3pdf
 timezone: Asia/Singapore
 repository: opendocsg/opendoc-docs
 plugins:
@@ -7,6 +7,7 @@ plugins:
 baseurl: ''
 server_PROD: https://search.opendoc.sg
 server_DEV: https://search-staging.opendoc.sg
+offline: false
 order: 
   - "01-introduction.md"
   - "02-getting-started.md"
