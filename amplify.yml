@@ -1,4 +1,7 @@
-version: 0.1
+version: 1.0
+env:
+  variables:
+      VERSION_RUBY_DEFAULT: $VERSION_RUBY_2_6
 frontend:
   phases:
     preBuild:
