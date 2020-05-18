@@ -1,5 +1,5 @@
 title: OpenDoc Documentation
-remote_theme: opendocsg/opendoc-theme@v2
+remote_theme: opendocsg/opendoc-theme
 timezone: Asia/Singapore
 repository: opendocsg/opendoc-docs
 plugins:
@@ -8,17 +8,20 @@ baseurl: ''
 server_PROD: https://search.opendoc.sg
 server_DEV: https://search-staging.opendoc.sg
 offline: false
-order: 
-  - "01-introduction.md"
-  - "02-getting-started.md"
-  - "03-using-markdown.md"
-  - "04-contribute.md"
-  - "05-deploying-to-amplify.md"
-  - "99-useful-references.md"
 
-document_order: 
-  - ''
 
+folders:
+  - name: '/'
+    title: 'Opendoc Docs'
+    order:
+      - "01-introduction.md"
+      - "02-getting-started.md"
+      - "03-using-markdown.md"
+      - "04-contribute.md"
+      - "05-deploying-to-amplify.md"
+      - "99-useful-references.md"
+
+google_analytics: 'UA-113717369-15'
 styling_options:
   primary_brand_color: '#444'
   logo_path: /assets/logo.png
