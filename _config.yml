@@ -13,6 +13,7 @@ order:
   - "02-getting-started.md"
   - "03-using-markdown.md"
   - "04-contribute.md"
+  - "05-deploying-to-amplify.md"
   - "99-useful-references.md"
 
 document_order: 
@@ -20,6 +21,6 @@ document_order:
 
 styling_options:
   primary_brand_color: '#444'
-  logo_path: /images/logo.png
+  logo_path: /assets/logo.png
   logo_url: https://opendoc.sg
   feedback_url: https://form.gov.sg/5cee3d46138e3200109244df

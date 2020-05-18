@@ -17,10 +17,8 @@ Headers come in different types, from the largest h1 size to the moderate h4 siz
 #### This is the moderate h4 header!
 ```
 <div class="examples-box">
-    <iframe width="100%" height="0" src="./iframes/creating-headers-iframe.html" frameborder="0" scrolling="auto" auto-resize></iframe>
+	<img src="{{ '/assets/headers.png' | relative_url }}" width="550">
 </div>
-
-<script>document.querySelectorAll('iframe[auto-resize]').forEach(function(el){el.onload=resizeIframe.bind(this,el)})</script>
 
 <button name="creating-headers-button" onclick="window.open('https://opendocsg.github.io/editor/#U1YIycgsVgCikoxUhZzEovTU4hKFDEOFjNTElNQiRS5lZRQVZalFlRBlChlGSIqUMc1RyDBGVoCqIjcfKJ5YAlRkAlMEAA==')">Try it out!</button>
 
@@ -106,10 +104,10 @@ Visit the <a href="https://www.tablesgenerator.com/html_tables" target="_blank">
 
 As they say, a picture speaks a thousand words. To add a image, you need both the image filepath, and an alternative text if the image fails to show up.
 ```markdown
-![Alternative text if image doesn't load](/images/govtech-logo.gif)
+![Alternative text if image doesn't load](/assets/govtech-logo.gif)
 ```
 <div class="examples-box">
-	<img src="./images/govtech-logo.gif" alt="Alternative text if image doesn't load"/>
+	<img src="./assets/govtech-logo.gif" alt="Alternative text if image doesn't load"/>
 </div>
 
 <button name="adding-images-button" onclick="window.open('https://opendocsg.github.io/editor/#HcoxCoAwDADAr8RJXZrdzc3BH4hIwRgDtSlNKD5f8Obrtjk51RxdGoHT6yAXyBOZ4FSy3Dskjec+3O7FJkQtlANrC8b4P8NVWY9FqwRrPH4=')">Try it out!</button>

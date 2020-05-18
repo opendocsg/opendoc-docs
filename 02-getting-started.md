@@ -99,7 +99,7 @@ git push origin master
 
 > Visit [Github.com](https://github.com).
 
-> ![](/images/edit-document/step-1-visit-site.png)
+> ![](/assets/edit-document/step-1-visit-site.png)
 
 **Step 2:** (If you __do not__ already have a Github account)
 
@@ -107,59 +107,59 @@ git push origin master
 
 > **IMPORTANT:** Once you have created your account, email us at admin@opendoc.sg with your username and document name and we will grant you permission to edit the document. An email will be sent to you with an invitation to join the document, click on the "Accept Invitation" button to proceed.
 
-> ![](/images/edit-document/step-2-sign-up-screen.png)
+> ![](/assets/edit-document/step-2-sign-up-screen.png)
 
 **Step 3:** 
 
 > Click on the "Sign in" button.
 
-> ![](/images/edit-document/step-3-sign-in-button.png)
+> ![](/assets/edit-document/step-3-sign-in-button.png)
 
 > and sign in to your account.
 
-> ![](/images/edit-document/step-3-sign-in-box.png)
+> ![](/assets/edit-document/step-3-sign-in-box.png)
 
 **Step 4:** 
 
 > Select the OpenDoc document you want to edit.
 
-> ![](/images/edit-document/step-4-select-document.png)
+> ![](/assets/edit-document/step-4-select-document.png)
 
 **Step 5:** 
 
 > Select the "staging" branch.
 
-> ![](/images/edit-document/step-5-select-staging-branch.png)
+> ![](/assets/edit-document/step-5-select-staging-branch.png)
 
 **Step 6:** 
 
 > Select the file that you would like to make changes to.
 
-> ![](/images/edit-document/step-6-select-file-to-edit.png)
+> ![](/assets/edit-document/step-6-select-file-to-edit.png)
 
 **Step 7:** 
 
 > Click on the "Edit" icon.
 
-> ![](/images/edit-document/step-7-click-on-edit.png)
+> ![](/assets/edit-document/step-7-click-on-edit.png)
 
 **Step 8:** 
 
 > Make the necessary edits.
 
-> ![](/images/edit-document/step-8-make-changes-to-file.png)
+> ![](/assets/edit-document/step-8-make-changes-to-file.png)
 
 **Step 9:** 
 
 > Add a description for the changes made.
 
-> ![](/images/edit-document/step-9-add-description-for-changes-made.png)
+> ![](/assets/edit-document/step-9-add-description-for-changes-made.png)
 
 **Step 10:** 
 
 > Click on the "Commit change" button.
 
-> ![](/images/edit-document/step-10-commit-changes.png)
+> ![](/assets/edit-document/step-10-commit-changes.png)
 
 Congrats!!! 🎉🎉🎉 You have made a change to the document.
 
@@ -175,7 +175,7 @@ Follow these steps if you want to publish the changes made in the draft environm
 
 > Visit [Github.com](https://github.com).
 
-> ![](/images/update-website/step-1-visit-site.png)
+> ![](/assets/update-website/step-1-visit-site.png)
 
 **Step 2:** (If you __do not__ already have a Github account)
 
@@ -183,53 +183,53 @@ Follow these steps if you want to publish the changes made in the draft environm
 
 > **IMPORTANT:** Once you have created your account, email us at admin@opendoc.sg with your username and document name and we will grant you permission to edit the document. An email will be sent to you with an invitation to join the document, click on the "Accept Invitation" button to proceed.
 
-> ![](/images/update-website/step-2-sign-up-screen.png)
+> ![](/assets/update-website/step-2-sign-up-screen.png)
 
 **Step 3:** 
 
 > Click on the "Sign in" button.
 
-> ![](/images/update-website/step-3-sign-in-button.png)
+> ![](/assets/update-website/step-3-sign-in-button.png)
 
 > and sign in to your account.
 
-> ![](/images/update-website/step-3-sign-in-box.png)
+> ![](/assets/update-website/step-3-sign-in-box.png)
 
 **Step 4:** 
 
 > Select the OpenDoc document you want to edit.
 
-> ![](/images/update-website/step-4-select-document.png)
+> ![](/assets/update-website/step-4-select-document.png)
 
 **Step 5:** 
 
 > Click on the "Pull requests" tab.
 
-> ![](/images/update-website/step-5-click-pull-request.png)
+> ![](/assets/update-website/step-5-click-pull-request.png)
 
 **Step 6:** 
 
 > Select "master" as the "base", and "staging" as the branch to compare from.
 
-> ![](/images/update-website/step-6-base-and-compare.png)
+> ![](/assets/update-website/step-6-base-and-compare.png)
 
 **Step 7:**
 
 > Click on the "Create pull request" button.
 
-> ![](/images/update-website/step-7-create-pull-request.png)
+> ![](/assets/update-website/step-7-create-pull-request.png)
 
 **Step 8:**
 
 > Select a reviewer for your pull request.
 
-> ![](/images/update-website/step-8-select-reviewer.png)
+> ![](/assets/update-website/step-8-select-reviewer.png)
 
 **Step 9:**
 
 > Create the pull request.
 
-> ![](/images/update-website/step-9-create-pull-request.png)
+> ![](/assets/update-website/step-9-create-pull-request.png)
 
 You've just created a pull request. Now, someone else from your team can proceed with approving the changes.
 
@@ -241,7 +241,7 @@ You've just created a pull request. Now, someone else from your team can proceed
 
 > Click on the "Pull requests" tab.
 
-> ![](/images/update-website/step-10-click-pull-request.png)
+> ![](/assets/update-website/step-10-click-pull-request.png)
 
 **Step 11:**
 
@@ -251,37 +251,37 @@ You've just created a pull request. Now, someone else from your team can proceed
 
 > Add your review to the pull request by clicking on the "Add review" button.
 
-> ![](/images/update-website/step-12-click-add-review.png)
+> ![](/assets/update-website/step-12-click-add-review.png)
 
 **Step 13:**
 
 > Review the changes made by clicking on the "Files changed" tab.
 
-> ![](/images/update-website/step-13-files-changed.png)
+> ![](/assets/update-website/step-13-files-changed.png)
 
 **Step 14:**
 
 > If the changes are correct, provide a short comment, select the "Approve" option, and click on the "Submit review" button.
 
-> ![](/images/update-website/step-14-review-changes.png)
+> ![](/assets/update-website/step-14-review-changes.png)
 
 **Step 15:**
 
 > Click on the "Merge pull request" button.
 
-> ![](/images/update-website/step-15-merge-pull-request.png)
+> ![](/assets/update-website/step-15-merge-pull-request.png)
 
 **Step 16:**
 
 > Lastly, click on the "Confirm merge" button.
 
-> ![](/images/update-website/step-16-confirm-merge.png)
+> ![](/assets/update-website/step-16-confirm-merge.png)
 
 ### Congrats!!! 🎉🎉🎉 
 
 Your updates have been pushed to production, and are now viewable to the public. 
 
-![](/images/update-website/step-16-merge-success.png)
+![](/assets/update-website/step-16-merge-success.png)
 
 
 
