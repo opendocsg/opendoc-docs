@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Deploying to Amplify</title>
+  <meta name="description" content="Deploying to Amplify
+
+Steps
+
+
+  
+    Set up repo from opendoc-template or copy amplify.yml manually
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:image" content="/opendoc-docs/site.styling_options.logo_path">
+
+  <link rel="icon" href="/opendoc-docs/assets/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/opendoc-docs/assets/styles/normalize.css">
+  <link rel="stylesheet" href="/opendoc-docs/assets/styles/main.css">
+  <link rel="alternate" type="application/rss+xml" title="OpenDoc Documentation"
+    href="/opendoc-docs/feed.xml">
+  <!-- Polyfill for corejs functions, promises, array.includes, array.from, etc. -->
+  <script src="/opendoc-docs/assets/vendor/babel-polyfill.min.js"></script>
+  <!-- Polyfill for dom functions -->
+  <script src="/opendoc-docs/assets/vendor/dom4.js" charset="utf-8"></script>
+  <!-- Polyfill for fetch API -->
+  <script src="/opendoc-docs/assets/vendor/fetch.umd.js"></script>
+  <!-- Priority Queue library for promises -->
+  <script src="/opendoc-docs/assets/js/pqueue.js"></script>
+  <!-- Helper functions that should be preloaded go here -->
+  <script src="/opendoc-docs/assets/js/helpers.js"></script><script src="/opendoc-docs/assets/js/google_analytics.js"></script></head>
+
+<body>
+  <div class="site-header no-print">
+    <div class="site-header-left">
+      <a href="/opendoc-docs/">
+        <h1 class="site-header-text">
+          OpenDoc Documentation
+        </h1>
+      </a>
+      <span class="site-last-updated">
+        LAST UPDATED: 02 JUNE 2020
+      <span>
+    </div>
+    <div class="site-header-right"><a id="contact-us" href="https://form.gov.sg/5cee3d46138e3200109244df" target="_blank">
+        <span>Contact Us</span>
+      </a>
+      <a href="https://opendoc.sg" class="desktop">
+        <img class="agency-logo" src="/opendoc-docs/assets/logo.png">
+      </a>
+      <a href="/opendoc-docs/" class="mobile">
+        <img class="agency-logo" src="/opendoc-docs/assets/logo.png">
+      </a>
+      <a class="search-btn top-mobile-btn">
+        <img src="/opendoc-docs/assets/images/search-icon-dark.svg">
+      </a>
+    </div>
+  </div>
+
+  <nav class="site-nav no-print">
+    <div class="nav-header no-print">
+      <div class="search-box">
+        <div class="search-icon-container search-btn">
+          <img class="search-icon mobile" src="/opendoc-docs/assets/images/search-icon-dark.svg"/>
+          <img class="search-icon" src="/opendoc-docs/assets/images/search-icon-white.svg"/>
+          <img class="close-icon" src="/opendoc-docs/assets/images/close.svg"/>
+        </div>
+        <span class="search-filter hidden">Opendoc Docs</span>
+        <div class="search-input-container">
+          <p class="search-header">search entire site</p>
+          <input id="search-box" placeholder="Search titles or keywords" type="text" />
+        </div>
+        <label class="clear-button">
+          <svg class="clear-icon" viewBox="0 0 18 18" width="18" height="18">
+            <path d="M2.42755 1L17.0331 15.60554l-1.41423 1.4142L1 2.38402"></path>
+            <path d="M1 15.51932L15.51933 1l1.4142 1.4142L2.2978 17.0331"></path>
+          </svg>
+        </label>
+      </div>
+      <div class="search-results">
+      </div>
+    </div>
+    <div class="nav-main no-print">
+
+    
+
+
+<section class="navigation">
+
+
+
+
+    
+    
+    
+    <section class="contents lonely" id="toc_/">
+    
+    
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+    
+        
+            
+
+            
+
+
+
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+                
+    
+        
+            
+                
+                
+    
+        
+            
+        
+            
+                
+                
+    
+        
+            
+        
+            
+        
+            
+                
+                
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                
+                
+    
+        
+            
+        
+            
+        
+            
+        
+            
+                
+                
+    
+
+
+
+<ul class="table-of-contents">  <li class="nav-branch"><a href="/opendoc-docs/02-getting-started.html" class="nav-link"><span class="directory-item"> Getting Started </span></a>    <ul>      <li class="nav-branch"><a href="/opendoc-docs/02-getting-started.html#creating-an-opendoc-it-administrators" class="nav-link"><span class="directory-item"> Creating an OpenDoc (IT administrators) </span></a></li>      <li class="nav-branch"><a href="/opendoc-docs/02-getting-started.html#editing-an-existing-opendoc-content-owners" class="nav-link"><span class="directory-item"> Editing an existing OpenDoc (Content owners) </span></a></li>      <li class="nav-branch"><a href="/opendoc-docs/02-getting-started.html#updating-opendoc-it-administrators" class="nav-link"><span class="directory-item"> Updating OpenDoc (IT administrators) </span></a></li>    </ul>  </li>  <li class="nav-branch"><a href="/opendoc-docs/03-using-markdown.html" class="nav-link"><span class="directory-item"> Using Markdown </span></a>    <ul>      <li class="nav-branch"><a href="/opendoc-docs/03-using-markdown.html#formatting-your-text" class="nav-link"><span class="directory-item"> Formatting your Text </span></a></li>      <li class="nav-branch"><a href="/opendoc-docs/03-using-markdown.html#organising-your-content" class="nav-link"><span class="directory-item"> Organising your Content </span></a></li>      <li class="nav-branch"><a href="/opendoc-docs/03-using-markdown.html#adding-media-enhancements" class="nav-link"><span class="directory-item"> Adding Media Enhancements </span></a></li>    </ul>  </li>  <li class="nav-branch"><a href="/opendoc-docs/04-contribute.html" class="nav-link"><span class="directory-item"> Contribute </span></a>    <ul>      <li class="nav-branch"><a href="/opendoc-docs/04-contribute.html#give-us-your-feedback" class="nav-link"><span class="directory-item"> Give us your feedback </span></a></li>    </ul>  </li>  <li class="nav-branch"><a href="/opendoc-docs/05-deploying-to-amplify.html" class="nav-link"><span class="directory-item"> Deploying to Amplify </span></a>    <ul>      <li class="nav-branch"><a href="/opendoc-docs/05-deploying-to-amplify.html#steps" class="nav-link"><span class="directory-item"> Steps </span></a></li>      <li class="nav-branch"><a href="/opendoc-docs/05-deploying-to-amplify.html#troubleshooting" class="nav-link"><span class="directory-item"> Troubleshooting </span></a></li>    </ul>  </li>  <li class="nav-branch"><a href="/opendoc-docs/99-useful-references.html" class="nav-link"><span class="directory-item"> Useful References </span></a>    <ul>      <li class="nav-branch"><a href="/opendoc-docs/99-useful-references.html#important-concepts" class="nav-link"><span class="directory-item"> Important concepts </span></a></li>    </ul>  </li></ul>
+    </section>
+
+</section></div>
+  </nav><div id="index-div">
+  <header class="doc-header no-print">
+    <div class=description-container>
+      <h2 id="document-title">
+        Opendoc Docs
+      </h2>
+      <div>
+        <div id="document-subtitle">
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar-container no-print">
+    <label for="menu-toggle" class="toolbar-button" id="menu-toggle-btn">
+            <input type="checkbox" id="menu-toggle" hidden>
+            <img class="btn-icon" src="/opendoc-docs/assets/images/sidebar.svg">
+            <img class="btn-icon hover" src="/opendoc-docs/assets/images/sidebar-hover.svg">
+            <img class="mobile-btn-icon " src="/opendoc-docs/assets/images/menu.svg">
+            <img class="mobile-btn-icon close" src="/opendoc-docs/assets/images/x-mobile.svg">
+            <div class="tooltip">Toggle Sidebar</div>
+        </label><div class="toolbar-button print-btn">
+            <img class="btn-icon" src="/opendoc-docs/assets/images/pdf.svg">
+            <img class="btn-icon hover" src="/opendoc-docs/assets/images/pdf-hover.svg">
+            <div class="tooltip">Save as PDF</div>
+        </div><div class="toolbar-button edit-btn">
+            <img class="btn-icon" src="/opendoc-docs/assets/images/github.svg">
+            <img class="btn-icon hover" src="/opendoc-docs/assets/images/github-hover.svg">
+            <div class="tooltip">View on Github</div>
+        </div></div>
+
+<div class="fab no-print" id="fab">
+    <div class="overlay" id="fab-overlay"></div>
+    <div class="back-to-top hidden" id="back-to-top" href="#">
+        <img class="btn-icon" src="/opendoc-docs/assets/images/chevron-up-white.svg">
+    </div>
+    <div class="trigger" id="fab-trigger">
+        <img class="btn-icon" src="/opendoc-docs/assets/images/vertical-dots.svg">
+        <img class="btn-icon close" src="/opendoc-docs/assets/images/x-mobile.svg">
+    </div>
+    <div class="actions"><a class="action feedback-btn" href="https://form.gov.sg/5cee3d46138e3200109244df" target="_blank">
+            <img class="btn-icon" src="/opendoc-docs/assets/images/feedback.svg">
+            <div class="tooltip">Feedback</div>
+        </a>
+        <div class="action share-btn">
+            <img class="btn-icon" src="/opendoc-docs/assets/images/share.svg">
+            <div class="tooltip">Share</div>
+        </div>
+        <div class="action print-btn">
+                <img class="btn-icon" src="/opendoc-docs/assets/images/pdf.svg">
+                <div class="tooltip">Save as PDF</div>
+            </div><div class="action edit-btn">
+                <img class="btn-icon" src="/opendoc-docs/assets/images/github.svg">
+                <div class="tooltip">View on Github</div>
+            </div></div>
+</div>
+  </div>
+
+  <main class="site-main" id="main-content" aria-label="Content"><h1 id="deploying-to-amplify">Deploying to Amplify</h1>
+
+<h2 id="steps">Steps</h2>
+
+<ol>
+  <li>
+    <p>Set up repo from <code class="language-plaintext highlighter-rouge">opendoc-template</code> or copy amplify.yml manually</p>
+  </li>
+  <li>
+    <p>Connect App
+<img src="/opendoc-docs/assets/amplify-connect.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Set environment variables
+<img src="/opendoc-docs/assets/amplify-envvar.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Set service role in general settings
+<img src="/opendoc-docs/assets/amplify-servicerole.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Check if webhook is set in Github (this should be done automatically when connecting to amplify)
+<img src="/opendoc-docs/assets/amplify-webhook.png" alt="" /></p>
+  </li>
+  <li>
+    <p>After build, check that search and pdf works.</p>
+  </li>
+</ol>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="search-not-working">Search not working</h3>
+
+<p>Check amplify build &gt; frontend logs that APP_NAME is set correctly and status code is 202.
+<img src="/opendoc-docs/assets/amplify-elasticsearch.png" alt="" /></p>
+
+<h3 id="pdf-not-working">PDF not working</h3>
+
+<p>Ensure that PDF_LAMBDA_KEY and PDF_LAMBDA_SERVER is correctly set.
+<img src="/opendoc-docs/assets/amplify-pdf.png" alt="" /></p>
+
+
+  </main>
+  <div class="site-branding no-print">
+    Powered by <a href="https://opendoc.sg"><img src="/opendoc-docs/assets/images/opendoc-logo-full.svg"></a>
+  </div>
+
+  <script src="/opendoc-docs/assets/vendor/jump.min.js" charset="utf-8"></script>
+  <script src="/opendoc-docs/assets/vendor/headroom.min.js" charset="utf-8"></script>
+  <script src="/opendoc-docs/assets/vendor/mark.min.js" charset="utf-8"></script>
+  <script src="/opendoc-docs/assets/vendor/web-share-shim.bundle.min.js"></script>
+  <script src="/opendoc-docs/assets/js/toolbar.js"></script>
+  <script src="/opendoc-docs/assets/js/page-index.js"></script>
+  <script src="/opendoc-docs/assets/js/pre-loader.js"></script>
+  <script src="/opendoc-docs/assets/js/lunr.min.js"></script>
+  <script src="/opendoc-docs/assets/js/search.js"></script>
+  <script src="/opendoc-docs/assets/js/header.js"></script>
+  <script src="/opendoc-docs/assets/js/navigation.js"></script>
+</body>
+
+</html>

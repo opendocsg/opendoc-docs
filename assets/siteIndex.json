@@ -1,0 +1,97 @@
+[{
+"title": "Getting Started",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/02-getting-started.html",
+"text": "Getting Started Github is an online service that helps people collaborate on large projects remotely. OpenDoc makes use Github’s platform to manage the documents and provide a simple user interface from which you can make changes to your documents. Before you proceed with the rest of this tutorial, we recommend that you take some time to complete the following online courses. Each course will take around half an hour to complete, and it will walk you through the user interface of Github, as well as some of the process flows that we’ll be using for OpenDoc. Introduction to Github (Strongly recommend) https://lab.github.com/githubtraining/introduction-to-github Communicating using Markdown (Strongly recommend) https://lab.github.com/githubtraining/communicating-using-markdown Reviewing pull requests (Optional) https://lab.github.com/githubtraining/reviewing-pull-requests More on this feature can be found here."
+}
+,{
+"title": "Creating an OpenDoc (IT administrators)",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/02-getting-started.html#creating-an-opendoc-it-administrators",
+"text": "Creating an OpenDoc (IT administrators) Step 1: If you do not have a Github account, follow the steps here to get one created. If you already have an account on Github account, create a new repository and name it in the following convention: opendoc-&lt;name_of_document&gt; e.g. opendoc-example-doc Step 2: Navigate into the working directory and clone the template repo onto your local machine. cd &lt;directory_path&gt; git clone git@github.com:opendocsg/opendoc-template.git Step 3: Rename the folder to match the name of the repository that was created, and update the remote address for the repo on your local machine. This allows you to make changes to the online repository that was created. mv opendoc-template opendoc-&lt;name_of_document&gt; cd opendoc-&lt;name_of_document&gt; git remote set-url origin git@github.com:opendocsg/opendoc-&lt;name_of_document&gt;.git Step 4: Update the following configuration fields in the _config.yml file: - title &lt;——- Update - repository &lt;——- Update - styling_options - primary_brand_color &lt;——- Update - logo_path &lt;——- Update Definitions: title: Name of document repository -&gt; opendocsg/opendoc- primary_brand_colour: Primary brand color of Ministry/Agency publishing the document logo_path: Path to logo file in this directory Step 5: Copy the markdown documents into the root directory of the repo. The documents have to be in the markdown (.md) format, and you can find out more about getting the documents converted in the following section. Step 6: Commit your changes, and update the online repository with the new version. git add . git commit -m &lt;“commit_message”&gt; git push origin master Configuring Github Pages Follow these instructions on “Enabling Github Pages to publish your site from master or gh-pages”. Link here"
+}
+,{
+"title": "Editing an existing OpenDoc (Content owners)",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/02-getting-started.html#editing-an-existing-opendoc-content-owners",
+"text": "Editing an existing OpenDoc (Content owners) Follow these steps if you want to make a change to one of your documents. Changes made here will NOT take effect immediately, and you will be able to review the document before publishing it online. Step 1: Visit Github.com. Step 2: (If you do not already have a Github account) Create a Github account by filling up the required information. IMPORTANT: Once you have created your account, email us at admin@opendoc.sg with your username and document name and we will grant you permission to edit the document. An email will be sent to you with an invitation to join the document, click on the “Accept Invitation” button to proceed. Step 3: Click on the “Sign in” button. and sign in to your account. Step 4: Select the OpenDoc document you want to edit. Step 5: Select the “staging” branch. Step 6: Select the file that you would like to make changes to. Step 7: Click on the “Edit” icon. Step 8: Make the necessary edits. Step 9: Add a description for the changes made. Step 10: Click on the “Commit change” button. Congrats!!! 🎉🎉🎉 You have made a change to the document."
+}
+,{
+"title": "Updating OpenDoc (IT administrators)",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/02-getting-started.html#updating-opendoc-it-administrators",
+"text": "Updating OpenDoc (IT administrators) Follow these steps if you want to publish the changes made in the draft environment. This process will require a second person to review the changes before the document can be published live. IMPORTANT: Before you proceed with the next steps, check if the draft site is reflecting the changes accurately. For the requestor Step 1: Visit Github.com. Step 2: (If you do not already have a Github account) Create a Github account by filling up the required information. IMPORTANT: Once you have created your account, email us at admin@opendoc.sg with your username and document name and we will grant you permission to edit the document. An email will be sent to you with an invitation to join the document, click on the “Accept Invitation” button to proceed. Step 3: Click on the “Sign in” button. and sign in to your account. Step 4: Select the OpenDoc document you want to edit. Step 5: Click on the “Pull requests” tab. Step 6: Select “master” as the “base”, and “staging” as the branch to compare from. Step 7: Click on the “Create pull request” button. Step 8: Select a reviewer for your pull request. Step 9: Create the pull request. You’ve just created a pull request. Now, someone else from your team can proceed with approving the changes. For the approver IMPORTANT: Complete the next steps ONLY after the pull request is created. Step 10: Click on the “Pull requests” tab. Step 11: Select the pull request that was submitted. Step 12: Add your review to the pull request by clicking on the “Add review” button. Step 13: Review the changes made by clicking on the “Files changed” tab. Step 14: If the changes are correct, provide a short comment, select the “Approve” option, and click on the “Submit review” button. Step 15: Click on the “Merge pull request” button. Step 16: Lastly, click on the “Confirm merge” button. Congrats!!! 🎉🎉🎉 Your updates have been pushed to production, and are now viewable to the public."
+}
+,{
+"title": "Using Markdown",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/03-using-markdown.html",
+"text": "Using Markdown Our system takes in Markdown files (with file extension .md) and converts them into elegant webpages. Here are some tips to orientate you with Markdown."
+}
+,{
+"title": "Formatting your Text",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/03-using-markdown.html#formatting-your-text",
+"text": "Formatting your Text Creating Headers Headers come in different types, from the largest h1 size to the moderate h4 size. Create headers by adding the # symbol at the front of your text. # This is the largest h1 header! ## This is the very large h2 header! ### This is the large h3 header! #### This is the moderate h4 header! Try it out! Styling Text You can add a variety of styles to your text for emphasis or clarity. These include bold, italics and footers. **Bold** and *italicize* your text like this. Add footers easily! [^1] [^1]: Your footer here. Bold and italicize your text like this. Add footers easily![1] Footnote↩ Try it out! Indentations Use the &gt; symbol at the start of your text to indent it for formatting purposes. &gt; This is an indented text! This is an indented text! Try it out!"
+}
+,{
+"title": "Organising your Content",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/03-using-markdown.html#organising-your-content",
+"text": "Organising your Content Using Lists As its name suggests, a list is used to display a collection of items. There are two kinds of lists - bullet lists and number lists. This is a bullet list: - Item 1 - Item 2 - Item 2.1 - Item 2.2 This is a number list: 1. Item A 2. Item B This is a bullet list: Item 1 Item 2 Item 2.1 Item 2.2 This is a number list: Item A Item B Try it out! Using Tables Tables are used to organise information in a clear, easy-to-read manner. Here’s how to add one to your webpage. Visit the HTML Table Generator and select File &gt; New Table. Once the table is created, double-click a cell to add in data. Then click the Generate button and copy the generated code to your Markdown file."
+}
+,{
+"title": "Adding Media Enhancements",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/03-using-markdown.html#adding-media-enhancements",
+"text": "Adding Media Enhancements Adding Images (jpg, png and gif) As they say, a picture speaks a thousand words. To add a image, you need both the image filepath, and an alternative text if the image fails to show up. ![Alternative text if image doesn’t load](/opendoc-docs/assets/govtech-logo.gif) Try it out! Adding Videos (YouTube) Videos are a good platform to bring across content effectively to viewers. You can add YouTube videos by simply following these steps: Click on “Share” button at the bottom of the video. Click on “Embed”. Copy the code &lt;iframe…&gt; &lt;/iframe&gt;. Paste it between the &lt;div class=”opendoc-video”&gt; and &lt;/div&gt; tags in the following example. &lt;div class=”opendoc-video”&gt; &lt;iframe width=”560” height=”315” src=”https://www.youtube.com/embed/BBcR4KGDdL0” frameborder=”0” allow=”autoplay; encrypted-media” allowfullscreen&gt;&lt;/iframe&gt; &lt;/div&gt; Try it out! Adding Links Sometimes, it may be important to direct your user to another website using a hyperlink. Two types of links are covered here, namely URL links and email links. [This](https://www.tech.gov.sg/) links to GovTech! Send an email to &lt;email@something.com&gt;! This links to GovTech! Send an email to email@something.com! Try it out! Adding Documents Finally, you may wish to attach supplementary documents on your webpage to allow users to download them. These can be word documents, pdf files or excel spreadsheets. Download the &lt;a href=”/files/digital-govt-blueprint.pdf” download&gt;Digital Government Blueprint (Summary)&lt;/a&gt; here! Download the Digital Government Blueprint (Summary) here! Try it out!"
+}
+,{
+"title": "Contribute",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/04-contribute.html",
+"text": "Contribute If you would like to contribute back to the OpenDoc project, our github repository is open here. Drop us a PR with a brief description of your submission, and we’ll take a look at it :)."
+}
+,{
+"title": "Give us your feedback",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/04-contribute.html#give-us-your-feedback",
+"text": "Give us your feedback If you have feedback on how we can improve OpenDoc, drop us an email at admin@opendoc.sg."
+}
+,{
+"title": "Useful References",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/99-useful-references.html",
+"text": "Useful References OpenDoc Github Markdown CheatSheet"
+}
+,{
+"title": "Important concepts",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/99-useful-references.html#important-concepts",
+"text": "Important concepts Github &amp; Github pages Github is a popular “Version Control System” used by engineers around the world to manage large scale projects. Github pages is a feature provided by Github that allows users to create static websites without having to set up any servers. Markdown formatting All documents on OpenDoc are stored in a non-proprietary format called Markdown. Markdown is a simple text-based markup language and conversion tool that allows writers to create great content for the web without having to worry too much about writing code. The syntax of the language is designed to be easy to learn and intuitive. Markdown flavours Markdown comes in different flavours to fit the needs of each use case. For OpenDoc, we are making use of the “insert-markdown-flavour-name” flavour, plus some additional customised styles to simulate features found in typical document processing applications. The custom styles will be defined in this document, and will be accompanied with samples to make it easier to start your OpenDoc document."
+}
+,{
+"title": "",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/01-introduction.html",
+"text": "&lt;h1"
+}
+,{
+"title": "Deploying to Amplify",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/05-deploying-to-amplify.html",
+"text": "Deploying to Amplify"
+}
+,{
+"title": "Steps",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/05-deploying-to-amplify.html#steps",
+"text": "Steps Set up repo from opendoc-template or copy amplify.yml manually Connect App Set environment variables Set service role in general settings Check if webhook is set in Github (this should be done automatically when connecting to amplify) After build, check that search and pdf works."
+}
+,{
+"title": "Troubleshooting",
+"documentTitle": "Opendoc Docs",
+"url": "/opendoc-docs/05-deploying-to-amplify.html#troubleshooting",
+"text": "Troubleshooting Search not working Check amplify build &gt; frontend logs that APP_NAME is set correctly and status code is 202. PDF not working Ensure that PDF_LAMBDA_KEY and PDF_LAMBDA_SERVER is correctly set."
+}
+]

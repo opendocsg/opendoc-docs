@@ -1,0 +1,684 @@
+<!-- layout for print export.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+  </head>
+
+  <body class="print-content">
+    <section class="description">
+      <img class="description-logo" src="./assets/logo.png">
+      <div class="description-title">OpenDoc Documentation</div>
+    </section>
+
+    <div class="site-main" aria-label="Content" >
+      
+<h1 id="getting-started">Getting Started</h1>
+
+<p><a href="https://github.com">Github</a> is an online service that helps people collaborate on large projects remotely. OpenDoc makes use Github’s platform to manage the documents and provide a simple user interface from which you can make changes to your documents.</p>
+
+<p>Before you proceed with the rest of this tutorial, we recommend that you take some time to complete the following online courses. Each course will take around half an hour to complete, and it will walk you through the user interface of Github, as well as some of the process flows that we’ll be using for OpenDoc.</p>
+
+<blockquote>
+  <p><strong>Introduction to Github</strong> (Strongly recommend)</p>
+</blockquote>
+
+<blockquote>
+  <p><a href="https://lab.github.com/githubtraining/introduction-to-github">https://lab.github.com/githubtraining/introduction-to-github</a></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Communicating using Markdown</strong> (Strongly recommend)</p>
+</blockquote>
+
+<blockquote>
+  <p><a href="https://lab.github.com/githubtraining/communicating-using-markdown">https://lab.github.com/githubtraining/communicating-using-markdown</a></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Reviewing pull requests</strong> (Optional)</p>
+</blockquote>
+
+<blockquote>
+  <p><a href="https://lab.github.com/githubtraining/reviewing-pull-requests">https://lab.github.com/githubtraining/reviewing-pull-requests</a></p>
+</blockquote>
+
+<p>More on this feature can be found <a href="https://pages.github.com/">here</a>.</p>
+
+<h2 id="creating-an-opendoc-it-administrators">Creating an OpenDoc (IT administrators)</h2>
+
+<p><strong>Step 1:</strong></p>
+
+<blockquote>
+  <p>If you <strong>do not</strong> have a Github account, follow the steps <a href="https://github.com/">here</a> to get one created.</p>
+</blockquote>
+
+<blockquote>
+  <p>If you <strong>already have an</strong> account on Github account, create a new repository and name it in the following convention:</p>
+</blockquote>
+
+<p><code class="language-plaintext highlighter-rouge">opendoc-&lt;name_of_document&gt; e.g. opendoc-example-doc</code></p>
+
+<p><strong>Step 2:</strong></p>
+
+<blockquote>
+  <p>Navigate into the working directory and clone the template repo onto your local machine.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;directory_path&gt;
+git clone git@github.com:opendocsg/opendoc-template.git
+</code></pre></div></div>
+
+<p><strong>Step 3:</strong></p>
+
+<blockquote>
+  <p>Rename the folder to match the name of the repository that was created, and update the remote address for the repo on your local machine. This allows you to make changes to the online repository that was created.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv opendoc-template opendoc-&lt;name_of_document&gt;
+cd opendoc-&lt;name_of_document&gt;
+git remote set-url origin git@github.com:opendocsg/opendoc-&lt;name_of_document&gt;.git
+</code></pre></div></div>
+
+<p><strong>Step 4:</strong></p>
+
+<blockquote>
+  <p>Update the following configuration fields in the _config.yml file:</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- title                           &lt;------- Update
+- repository 	                  &lt;------- Update
+- styling_options
+	- primary_brand_color     &lt;------- Update
+	- logo_path               &lt;------- Update
+</code></pre></div></div>
+
+<blockquote>
+  <p>Definitions:</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>title: Name of document</li>
+    <li>repository -&gt; opendocsg/opendoc-<name_of_document></name_of_document></li>
+    <li>primary_brand_colour: Primary brand color of Ministry/Agency publishing the document</li>
+    <li>logo_path: Path to logo file in this directory</li>
+  </ul>
+</blockquote>
+
+<p><strong>Step 5:</strong></p>
+
+<blockquote>
+  <p>Copy the markdown documents into the root directory of the repo. The documents have to be in the markdown (.md) format, and you can find out more about getting the documents converted in the following section.</p>
+</blockquote>
+
+<p><strong>Step 6:</strong></p>
+
+<blockquote>
+  <p>Commit your changes, and update the online repository with the new version.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+git commit -m &lt;"commit_message"&gt;
+git push origin master
+</code></pre></div></div>
+
+<h3 id="configuring-github-pages">Configuring Github Pages</h3>
+
+<blockquote>
+  <p>Follow these instructions on “Enabling Github Pages to publish your site from master or gh-pages”.</p>
+</blockquote>
+
+<blockquote>
+  <p>Link <a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages">here</a></p>
+</blockquote>
+
+<h2 id="editing-an-existing-opendoc-content-owners">Editing an existing OpenDoc (Content owners)</h2>
+
+<blockquote>
+  <p>Follow these steps if you want to make a change to one of your documents. Changes made here will <strong>NOT</strong> take effect immediately, and you will be able to review the document before publishing it online.</p>
+</blockquote>
+
+<p><strong>Step 1:</strong></p>
+
+<blockquote>
+  <p>Visit <a href="https://github.com">Github.com</a>.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/edit-document/step-1-visit-site.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 2:</strong> (If you <strong>do not</strong> already have a Github account)</p>
+
+<blockquote>
+  <p>Create a Github account by filling up the required information.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>IMPORTANT:</strong> Once you have created your account, email us at admin@opendoc.sg with your username and document name and we will grant you permission to edit the document. An email will be sent to you with an invitation to join the document, click on the “Accept Invitation” button to proceed.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/edit-document/step-2-sign-up-screen.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 3:</strong></p>
+
+<blockquote>
+  <p>Click on the “Sign in” button.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/edit-document/step-3-sign-in-button.png" alt="" /></p>
+</blockquote>
+
+<blockquote>
+  <p>and sign in to your account.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/edit-document/step-3-sign-in-box.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 4:</strong></p>
+
+<blockquote>
+  <p>Select the OpenDoc document you want to edit.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/edit-document/step-4-select-document.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 5:</strong></p>
+
+<blockquote>
+  <p>Select the “staging” branch.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/edit-document/step-5-select-staging-branch.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 6:</strong></p>
+
+<blockquote>
+  <p>Select the file that you would like to make changes to.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/edit-document/step-6-select-file-to-edit.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 7:</strong></p>
+
+<blockquote>
+  <p>Click on the “Edit” icon.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/edit-document/step-7-click-on-edit.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 8:</strong></p>
+
+<blockquote>
+  <p>Make the necessary edits.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/edit-document/step-8-make-changes-to-file.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 9:</strong></p>
+
+<blockquote>
+  <p>Add a description for the changes made.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/edit-document/step-9-add-description-for-changes-made.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 10:</strong></p>
+
+<blockquote>
+  <p>Click on the “Commit change” button.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/edit-document/step-10-commit-changes.png" alt="" /></p>
+</blockquote>
+
+<p>Congrats!!! 🎉🎉🎉 You have made a change to the document.</p>
+
+<h2 id="updating-opendoc-it-administrators">Updating OpenDoc (IT administrators)</h2>
+
+<p>Follow these steps if you want to publish the changes made in the draft environment. This process will require a second person to review the changes before the document can be published live.</p>
+
+<p><strong>IMPORTANT:</strong> Before you proceed with the next steps, check if the draft site is reflecting the changes accurately.</p>
+
+<h3 id="for-the-requestor">For the requestor</h3>
+
+<p><strong>Step 1:</strong></p>
+
+<blockquote>
+  <p>Visit <a href="https://github.com">Github.com</a>.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-1-visit-site.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 2:</strong> (If you <strong>do not</strong> already have a Github account)</p>
+
+<blockquote>
+  <p>Create a Github account by filling up the required information.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>IMPORTANT:</strong> Once you have created your account, email us at admin@opendoc.sg with your username and document name and we will grant you permission to edit the document. An email will be sent to you with an invitation to join the document, click on the “Accept Invitation” button to proceed.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-2-sign-up-screen.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 3:</strong></p>
+
+<blockquote>
+  <p>Click on the “Sign in” button.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-3-sign-in-button.png" alt="" /></p>
+</blockquote>
+
+<blockquote>
+  <p>and sign in to your account.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-3-sign-in-box.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 4:</strong></p>
+
+<blockquote>
+  <p>Select the OpenDoc document you want to edit.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-4-select-document.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 5:</strong></p>
+
+<blockquote>
+  <p>Click on the “Pull requests” tab.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-5-click-pull-request.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 6:</strong></p>
+
+<blockquote>
+  <p>Select “master” as the “base”, and “staging” as the branch to compare from.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-6-base-and-compare.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 7:</strong></p>
+
+<blockquote>
+  <p>Click on the “Create pull request” button.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-7-create-pull-request.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 8:</strong></p>
+
+<blockquote>
+  <p>Select a reviewer for your pull request.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-8-select-reviewer.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 9:</strong></p>
+
+<blockquote>
+  <p>Create the pull request.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-9-create-pull-request.png" alt="" /></p>
+</blockquote>
+
+<p>You’ve just created a pull request. Now, someone else from your team can proceed with approving the changes.</p>
+
+<h3 id="for-the-approver">For the approver</h3>
+
+<p><strong>IMPORTANT:</strong> Complete the next steps <strong>ONLY</strong> after the pull request is created.</p>
+
+<p><strong>Step 10:</strong></p>
+
+<blockquote>
+  <p>Click on the “Pull requests” tab.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-10-click-pull-request.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 11:</strong></p>
+
+<blockquote>
+  <p>Select the pull request that was submitted.</p>
+</blockquote>
+
+<p><strong>Step 12:</strong></p>
+
+<blockquote>
+  <p>Add your review to the pull request by clicking on the “Add review” button.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-12-click-add-review.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 13:</strong></p>
+
+<blockquote>
+  <p>Review the changes made by clicking on the “Files changed” tab.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-13-files-changed.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 14:</strong></p>
+
+<blockquote>
+  <p>If the changes are correct, provide a short comment, select the “Approve” option, and click on the “Submit review” button.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-14-review-changes.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 15:</strong></p>
+
+<blockquote>
+  <p>Click on the “Merge pull request” button.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-15-merge-pull-request.png" alt="" /></p>
+</blockquote>
+
+<p><strong>Step 16:</strong></p>
+
+<blockquote>
+  <p>Lastly, click on the “Confirm merge” button.</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="/opendoc-docs/assets/update-website/step-16-confirm-merge.png" alt="" /></p>
+</blockquote>
+
+<h3 id="congrats-">Congrats!!! 🎉🎉🎉</h3>
+
+<p>Your updates have been pushed to production, and are now viewable to the public.</p>
+
+<p><img src="/opendoc-docs/assets/update-website/step-16-merge-success.png" alt="" /></p>
+
+<h1 id="using-markdown">Using Markdown</h1>
+
+<p>Our system takes in Markdown files (with file extension .md) and converts them into elegant webpages. Here are some tips to orientate you with Markdown.</p>
+
+<h2 id="formatting-your-text">Formatting your Text</h2>
+<p><strong>Creating Headers</strong></p>
+
+<p>Headers come in different types, from the largest h1 size to the moderate h4 size. Create headers by adding the # symbol at the front of your text.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This is the largest h1 header!
+## This is the very large h2 header!
+### This is the large h3 header!
+#### This is the moderate h4 header!
+</code></pre></div></div>
+<div class="examples-box">
+	<img src="/opendoc-docs/assets/headers.png" width="550" />
+</div>
+
+<p><button name="creating-headers-button" onclick="window.open('https://opendocsg.github.io/editor/#U1YIycgsVgCikoxUhZzEovTU4hKFDEOFjNTElNQiRS5lZRQVZalFlRBlChlGSIqUMc1RyDBGVoCqIjcfKJ5YAlRkAlMEAA==')">Try it out!</button></p>
+
+<p><strong>Styling Text</strong></p>
+
+<p>You can add a variety of styles to your text for emphasis or clarity. These include bold, italics and footers.</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gs">**Bold**</span> and <span class="ge">*italicize*</span> your text like this.
+
+Add footers easily! [^1]
+<span class="p">[</span><span class="ss">^1</span><span class="p">]:</span> <span class="sx">Your</span> footer here.
+</code></pre></div></div>
+<div class="examples-box">
+	<b>Bold</b> and <i>italicize</i> your text like this.
+	Add footers easily!<sup class="footnote-ref">[1]</sup>
+	<section class="footnotes">
+		<ol class="footnotes-list">
+			<li id="fn1" class="footnote-item"><p>Footnote↩</p>
+			</li>
+		</ol>
+	</section>
+</div>
+
+<p><button name="styling-text-button" onclick="window.open('https://opendocsg.github.io/editor/#09Jyys9J0dJSSMxLUdDKLEnMyUzOrErVUqjMLy1SKEmtKFHIycxOVSjJyCzW4wIA')">Try it out!</button></p>
+
+<p><strong>Indentations</strong></p>
+
+<p>Use the &gt; symbol at the start of your text to indent it for formatting purposes.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; This is an indented text!
+</code></pre></div></div>
+<div class="examples-box">
+    <div style="margin-left: 40px"> This is an indented text! </div>
+</div>
+
+<p><button name="indentations-button" onclick="window.open('https://opendocsg.github.io/editor/#88vP083MS0nNK0lNUShJrShR5LJTCMnILFYAosQ8BTQ5AA==')">Try it out!</button></p>
+
+<h2 id="organising-your-content">Organising your Content</h2>
+<p><strong>Using Lists</strong></p>
+
+<p>As its name suggests, a list is used to display a collection of items. There are two kinds of lists - bullet lists and number lists.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is a bullet list:
+ - Item 1
+ - Item 2
+   - Item 2.1
+   - Item 2.2
+
+This is a number list:
+1. Item A
+2. Item B
+</code></pre></div></div>
+<div class="examples-box">
+	This is a bullet list:
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2
+		<ul>
+			<li>Item 2.1</li>
+			<li>Item 2.2</li>
+		</ul>
+	</li>
+	</ul>
+
+	This is a number list:
+	<ol>
+		<li>Item A</li>
+		<li>Item B</li>
+	</ol>
+</div>
+
+<p><button name="using-lists-button" onclick="window.open('https://opendocsg.github.io/editor/#C8nILFYAokSFpNKcnNQShZzM4hIrLgVdBc+S1FwFQzjLiEtBAc7WM0ThGXFxhcDNySvNTUotgppjqAdR48hlBGU5cQEA')">Try it out!</button></p>
+
+<p><strong>Using Tables</strong></p>
+
+<p>Tables are used to organise information in a clear, easy-to-read manner. Here’s how to add one to your webpage.</p>
+
+<p>Visit the <a href="https://www.tablesgenerator.com/html_tables" target="_blank"> HTML Table Generator</a> and select File &gt; New Table. Once the table is created, double-click a cell to add in data. Then click the Generate button and copy the generated code to your Markdown file.</p>
+
+<h2 id="adding-media-enhancements">Adding Media Enhancements</h2>
+<p><strong>Adding Images (jpg, png and gif)</strong></p>
+
+<p>As they say, a picture speaks a thousand words. To add a image, you need both the image filepath, and an alternative text if the image fails to show up.</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Alternative text if image doesn't load</span><span class="p">](</span><span class="sx">/opendoc-docs/assets/govtech-logo.gif</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="examples-box">
+	<img src="./assets/govtech-logo.gif" alt="Alternative text if image doesn't load" />
+</div>
+
+<p><button name="adding-images-button" onclick="window.open('https://opendocsg.github.io/editor/#HcoxCoAwDADAr8RJXZrdzc3BH4hIwRgDtSlNKD5f8Obrtjk51RxdGoHT6yAXyBOZ4FSy3Dskjec+3O7FJkQtlANrC8b4P8NVWY9FqwRrPH4=')">Try it out!</button></p>
+
+<p><strong>Adding Videos (YouTube)</strong></p>
+
+<p>Videos are a good platform to bring across content effectively to viewers. You can add YouTube videos by simply following these steps:</p>
+
+<ol>
+  <li>Click on “Share” button at the bottom of the video.</li>
+  <li>Click on “Embed”.</li>
+  <li>Copy the code &lt;iframe…&gt; &lt;/iframe&gt;.</li>
+  <li>Paste it between the &lt;div class=”opendoc-video”&gt; and &lt;/div&gt; tags in the following example.</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"opendoc-video"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">"560"</span> <span class="na">height=</span><span class="s">"315"</span> <span class="na">src=</span><span class="s">"https://www.youtube.com/embed/BBcR4KGDdL0"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">allow=</span><span class="s">"autoplay; encrypted-media"</span> <span class="na">allowfullscreen</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="examples-box">
+	<div class="opendoc-video">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/BBcR4KGDdL0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+	</div>
+</div>
+
+<p><button name="adding-videos-button" onclick="window.open('https://opendocsg.github.io/editor/#Lc7LDoIwFATQPV/R3D1Uo7hQyoKYuNCVf1B6L7ZJoaQPGv5efCwnmZmcBs3ClJUhCHAzTehUuRgkB21RNGbwciSWDUYtoD7tgGkyLx0FHPY1sOCVAB3jHM6c55yr1aWYeqqUGzmNPSHvOvU83m9XfGzj713vPJIXsGVprcsCZIputnK9MJqUX+dIWI6ERv4bQ7I2KE80tQ3/mT46vtnb4g0=')">Try it out!</button></p>
+
+<p><strong>Adding Links</strong></p>
+
+<p>Sometimes, it may be important to direct your user to another website using a hyperlink. Two types of links are covered here, namely URL links and email links.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nv">This</span><span class="p">](</span><span class="sx">https://www.tech.gov.sg/</span><span class="p">)</span> links to GovTech!
+Send an email to <span class="nv">&lt;email@something.com&gt;</span>!
+</code></pre></div></div>
+<div class="examples-box">
+	<a href="https://www.tech.gov.sg/"> This </a> links to GovTech!
+	Send an email to <a href="mailto:email@something.com">email@something.com</a>!
+</div>
+
+<p><button name="adding-links-button" onclick="window.open('https://opendocsg.github.io/editor/#iw7JyCyO1cgoKSkottLXLy8v1ytJTc7QS88v0ytO19dUyMnMyy5WKMlXcM8vCwHKKHIFp+alKCTmKaTmJmbmgGRswCyH4vzc1JKMzLx0veT8XDtFLgA=')">Try it out!</button></p>
+
+<p><strong>Adding Documents</strong></p>
+
+<p>Finally, you may wish to attach supplementary documents on your webpage to allow users to download them. These can be word documents, pdf files or excel spreadsheets.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Download the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/files/digital-govt-blueprint.pdf"</span> <span class="na">download</span><span class="nt">&gt;</span>Digital Government Blueprint (Summary)<span class="nt">&lt;/a&gt;</span> here!
+</code></pre></div></div>
+<div class="examples-box">
+	Download the <a href="./files/digital-govt-blueprint.pdf" download="">Digital Government Blueprint (Summary)</a> here!
+</div>
+
+<p><button name="adding-documents-button" onclick="window.open('https://opendocsg.github.io/editor/#JcyxDsIgEADQX8GtHQR1Mo6miR/gaEyDcgUM3JHjKPHvNen2pjdRx0TWKQmgHlP0UWxSN1qBMQOKuqYGheNfw73lbPk7PocgUurFmN67FngH7WnV1ZslJqjGbcte2GJdiLOVSGicf811K+ZPQzgdjmdd3DKqAAy7Hw==')">Try it out!</button></p>
+
+<h1 id="contribute">Contribute</h1>
+
+<p>If you would like to contribute back to the OpenDoc project, our github repository is open <a href="https://github.com/opendocsg/opendoc-theme">here</a>. Drop us a PR with a brief description of your submission, and we’ll take a look at it :).</p>
+
+<h2 id="give-us-your-feedback">Give us your feedback</h2>
+
+<p>If you have feedback on how we can improve OpenDoc, drop us an email at admin@opendoc.sg.</p>
+
+<h1 id="useful-references">Useful References</h1>
+
+<ul>
+  <li><a href="https://opendoc.sg">OpenDoc</a></li>
+  <li><a href="https://github.com/">Github</a></li>
+  <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown CheatSheet</a></li>
+</ul>
+
+<h2 id="important-concepts">Important concepts</h2>
+
+<h3 id="github--github-pages">Github &amp; Github pages</h3>
+
+<p>Github is a popular “Version Control System” used by engineers around the world to manage large scale projects. Github pages is a feature provided by Github that allows users to create static websites without having to set up any servers.</p>
+
+<h3 id="markdown-formatting">Markdown formatting</h3>
+
+<p>All documents on OpenDoc are stored in a non-proprietary format called Markdown.</p>
+
+<p>Markdown is a simple text-based markup language and conversion tool that allows writers to create great content for the web without having to worry too much about writing code. The syntax of the language is designed to be easy to learn and intuitive.</p>
+
+<h3 id="markdown-flavours">Markdown flavours</h3>
+
+<p>Markdown comes in different flavours to fit the needs of each use case.</p>
+
+<p>For OpenDoc, we are making use of the “insert-markdown-flavour-name” flavour, plus some additional customised styles to simulate features found in typical document processing applications. The custom styles will be defined in this document, and will be accompanied with samples to make it easier to start your OpenDoc document.</p>
+
+<p><img src="/opendoc-docs/assets/opendoc-setup.png" alt="Alternative text if image doesn't load" /></p>
+
+<h1 id="deploying-to-amplify">Deploying to Amplify</h1>
+
+<h2 id="steps">Steps</h2>
+
+<ol>
+  <li>
+    <p>Set up repo from <code class="language-plaintext highlighter-rouge">opendoc-template</code> or copy amplify.yml manually</p>
+  </li>
+  <li>
+    <p>Connect App
+<img src="/opendoc-docs/assets/amplify-connect.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Set environment variables
+<img src="/opendoc-docs/assets/amplify-envvar.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Set service role in general settings
+<img src="/opendoc-docs/assets/amplify-servicerole.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Check if webhook is set in Github (this should be done automatically when connecting to amplify)
+<img src="/opendoc-docs/assets/amplify-webhook.png" alt="" /></p>
+  </li>
+  <li>
+    <p>After build, check that search and pdf works.</p>
+  </li>
+</ol>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="search-not-working">Search not working</h3>
+
+<p>Check amplify build &gt; frontend logs that APP_NAME is set correctly and status code is 202.
+<img src="/opendoc-docs/assets/amplify-elasticsearch.png" alt="" /></p>
+
+<h3 id="pdf-not-working">PDF not working</h3>
+
+<p>Ensure that PDF_LAMBDA_KEY and PDF_LAMBDA_SERVER is correctly set.
+<img src="/opendoc-docs/assets/amplify-pdf.png" alt="" /></p>
+
+
+    </div>
+  </body>
+
+</html>
